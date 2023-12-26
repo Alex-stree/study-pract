@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="./asset/css/style.css">
+    <link rel="stylesheet" href="./asset/css/media.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <a href="./main.html"><div class="logo"></div></a>
+            <div class="text-nav-menu">
+                <nav class="nav">
+                    <ul>
+                        <li class="nav-mi"><a href="./menu.html">Меню</a></li>
+                        <li class="nav-mi"><a href="./gallery.html">Галерея</a></li>
+                        <li class="nav-mi"><a href="./communication.html">Связь</a></li>
+                    </ul>
+                </nav>
+                <div class="burger">
+                    <span></span>
+                </div>
+            </div>
+            <a href="./cart.html"><div class="cart-ic"></div></a>           
+        </header>
+        <main>
+            <hr class="menu-lin">
+            <div class="zag-st"><br>
+                <div class="text-nazvanst">Галерея</div>
+            </div>
+            <hr class="menu-lin">
+            <div class="gallery-fons">
+                <h3 class="gal-zag">Колдографии заведения</h3>                
+                <div class="slider">
+                    <a class="previous-mobile" onclick="previousSlide()"></a>
+                    <div class="item">
+                        <a class="previous" onclick="previousSlide()">&#10094;</a>          
+                        <img src="./asset/img/ajnj.png" alt="01">
+                        <a class="next" onclick="nextSlide()">&#10095;</a>
+                    </div>            
+                    <div class="item">
+                        <a class="previous" onclick="previousSlide()">&#10094;</a>
+                        <img src="./asset/img/Rectangle_19.png" alt="02">
+                        <a class="next" onclick="nextSlide()">&#10095;</a>
+                    </div>            
+                    <div class="item">
+                        <a class="previous" onclick="previousSlide()">&#10094;</a>           
+                        <img src="./asset/img/Rectangle_109.png" alt="03">
+                        <a class="next" onclick="nextSlide()">&#10095;</a>
+                    </div>
+                    <a class="next-mobile" onclick="nextSlide()"></a>                    
+                </div>
+                <h3 class="gal-zag iio">Колдографии Волшебников</h3>
+                <div class="slider02">
+                    <div class="item02">
+                        <a class="previous02" onclick="previous02Slide()">&#10094;</a>          
+                        <img src="./asset/img/Rectangle54_19.png" alt="1">
+                        <a class="next" onclick="nSlide()">&#10095;</a>
+                    </div>            
+                    <div class="item02">
+                        <a class="previous02" onclick="previou02sSlide()">&#10094;</a>
+                        <img src="./asset/img/Rectangle45019.png" alt="2">
+                        <a class="next" onclick="nSlide()">&#10095;</a>
+                    </div>            
+                    <div class="item02">
+                        <a class="previous02" onclick="previous02Slide()">&#10094;</a>           
+                        <img src="./asset/img/Rectangle54019.png" alt="3">
+                        <a class="next" onclick="nSlide()">&#10095;</a>
+                    </div>                    
+                </div>
+            </div>
+        </main>
+        <footer class="footer"><br>
+            <hr class="line-footer">
+            <div class="footer-content">
+                <div class="logo-and-text">
+                    <a href="./main.html"><div class="logo logfot"></div></a>
+                    <div class="fotter-text-an-logo">Адрес: пр-кт.Октября 59<br>Телефон: 8(912) 080-48-52</div>
+                </div>
+                <div class="nav-footer">
+                    <ul>
+                        <li><a href="./menu.html">Меню</a></li>
+                        <li><a href="./gallery.html">Галерея</a></li>
+                        <li><a href="./communication.html">Связь</a></li>
+                    </ul>
+                </div>
+                <div class="iconics-footer">
+                    <div class="ic vk"></div>
+                    <div class="ic tg"></div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script>
+        document.querySelector('.burger').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.querySelector('.nav').classList.toggle('open');
+        })
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        function nextSlide() {
+           showSlides(slideIndex += 1);
+        }
+        function previousSlide() {
+           showSlides(slideIndex -= 1);  
+        }
+        function currentSlide(n) {
+           showSlides(slideIndex = n);
+        }
+        function showSlides(n) {
+           let slides = document.getElementsByClassName("item");
+            if (n > slides.length) {
+               slideIndex = 1
+            }
+            if (n < 1) {
+               slideIndex = slides.length
+            }
+            for (let slide of slides) {
+               slide.style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "flex";    
+        }
+        let slIndex = 1;
+        sSlides(slIndex);
+        function nSlide() {
+           sSlides(slIndex += 1);
+        }
+        function previous02Slide() {
+           slides(slIndex -= 1);  
+        }
+        function current02Slide(n) {
+           sSlides(slIndex = n);
+        }
+        function sSlides(n) {
+           let des = document.getElementsByClassName("item02");
+            if (n > des.length) {
+                slIndex = 1
+            }
+            if (n < 1) {
+                slIndex = des.length
+            }
+            for (let lide of des) {
+               lide.style.display = "none";
+            }
+            des[slIndex - 1].style.display = "flex";    
+        }
+    </script>
+</body>
+</html>

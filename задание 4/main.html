@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+    <link rel="stylesheet" href="./asset/css/style.css">
+    <link rel="stylesheet" href="./asset/css/media.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <a href="./main.html"><div class="logo"></div></a>
+            <div class="text-nav-menu">
+                <nav class="nav">
+                    <ul>
+                        <li class="nav-mi"><a href="./menu.html">Меню</a></li>
+                        <li class="nav-mi"><a href="./gallery.html">Галерея</a></li>
+                        <li class="nav-mi"><a href="./communication.html">Связь</a></li>
+                    </ul>
+                </nav>
+                <div class="burger">
+                    <span></span>
+                </div>
+            </div>
+            <a href="./cart.html"><div class="cart-ic"></div></a>           
+        </header>
+        <main>
+            <hr class="menu-lin">
+            <div class="previe">
+                <div class="img-prew"></div>
+                <div class="text-content-prew">
+                    <h1 class="prew-zag">COFFEE POINT</h1>
+                    <h3 class="prew-podtext">тематическая кофейня</h3>
+                    <h5 class="prew-text">Посвященная  вселенной Гарри Поттер</h5>
+                </div>
+            </div>
+            <div class="accorti"><br>
+                <h3 class="zag-accorti">Популярное в меню</h3>
+                <div class="cards-accorti">
+                    <div class="card-accorti">
+                        <div class="card-img-acc lig"></div>
+                        <div class="card-text-acc">шоколадные лягушки</div>
+                        <button class="card-cart">В корзину</button>
+                    </div>
+                    <div class="card-accorti">
+                        <div class="card-img-acc zif"></div>
+                        <div class="card-text-acc">Какао</div>
+                        <button class="card-cart">В корзину</button>
+                    </div>
+                    <div class="card-accorti">
+                        <div class="card-img-acc pal"></div>
+                        <div class="card-text-acc">Сливочный раф</div>
+                        <button class="card-cart">В корзину</button>
+                    </div>
+                    <div class="card-accorti">
+                        <div class="card-img-acc stac"></div>
+                        <div class="card-text-acc">Капучино</div>
+                        <button class="card-cart">В корзину</button>
+                    </div>                    
+                </div>
+            </div>
+            <div class="kombo-magig">
+                <h3 class="kom-zag">Комбо</h3>
+                <div class="cards-kombo">
+                    <div class="card-kombo">
+                        <div class="img-kombo dobby"></div>
+                        <div class="card-text-kombo">Добби Свободен</div>
+                        <button class="card-cart">В корзину</button>
+                    </div>
+                    <div class="card-kombo">
+                        <div class="img-kombo expres"></div>
+                        <div class="card-text-kombo">Хогвартс Экспресс</div>
+                        <button class="card-cart">В корзину</button>
+                    </div>
+                    <div class="card-kombo">
+                        <div class="img-kombo fenix"></div>
+                        <div class="card-text-kombo">Орден Феникса</div>
+                        <button class="card-cart">В корзину</button>
+                    </div>
+                </div>
+                <div class="magigs">
+                    <h3 class="zag-magig">Волшебное</h3>
+                    <div class="cards-magig">
+                        <div class="card-magig">
+                            <div class="img-kombo hedvig"></div>
+                            <div class="text-magig">Хедвиг</div>
+                            <button class="card-cart">В корзину</button>
+                        </div>
+                        <div class="card-magig">
+                            <div class="img-kombo beer"></div>
+                            <div class="text-magig">Сливочное пиво</div>
+                            <button class="card-cart">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer"><br>
+            <hr class="line-footer">
+            <div class="footer-content">
+                <div class="logo-and-text">
+                    <div class="logo logfot"><a href="./main.html"></a></div>
+                    <div class="fotter-text-an-logo">Адрес: пр-кт.Октября 59<br>Телефон: 8(912) 080-48-52</div>
+                </div>
+                <div class="nav-footer">
+                    <ul>
+                        <li><a href="./menu.html">Меню</a></li>
+                        <li><a href="./gallery.html">Галерея</a></li>
+                        <li><a href="./communication.html">Связь</a></li>
+                    </ul>
+                </div>
+                <div class="iconics-footer">
+                    <div class="ic vk"></div>
+                    <div class="ic tg"></div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script>
+        document.querySelector('.burger').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.querySelector('.nav').classList.toggle('open');
+        })
+    </script>
+</body>
+</html>

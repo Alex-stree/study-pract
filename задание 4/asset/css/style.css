@@ -1,0 +1,673 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family:'Lumos' ;
+    src: url(../fonts/Lumos.ttf);
+}
+@font-face {
+    font-family:'harrypotter' ;
+    src: url(../fonts/harrypotterrussianversionofgfdtk.ttf);
+}
+@font-face {
+    font-family: 'RubikDoodle';
+    src: url(../fonts/RubikDoodleShadow-Regular.ttf);
+}
+@font-face {
+    font-family: 'IBMPlexSans';
+    src: url(../fonts/IBMPlexSans-Bold.ttf);
+    src: url(../fonts/IBMPlexSans-Regular.ttf);
+}
+@font-face {
+    font-family: 'Arsenal' ;
+    src: url(../fonts/Arsenal-Bold.ttf);
+    src: url(../fonts/Arsenal-Regular.ttf);
+}
+.wrapper{
+    flex-grow: 1;
+}
+.open{
+    display: flex !important;
+}
+/* Шапка */
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100px;
+    background-color: #230802;
+    padding: 0 150px;
+}
+.logo{
+    width: 80px;
+    height: 80px;
+    margin-top: 15px;
+    background-size: cover;
+    background-image: url(../img/logo.svg);
+}
+.cart-ic{
+    width: 105px;
+    height: 86px;
+    background-image: url(../img/покупки.png);
+}
+.text-nav-menu
+{
+    display: flex;
+    justify-content: center;
+}
+.nav{
+    display: flex;
+    margin-left: 25%;
+}
+.nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    color: #E2BE00;
+    font-size: 30px;
+    font-family: 'Arsenal' ;
+    font-weight: normal;
+    justify-content: space-between;
+    gap: 50px;
+}
+.nav-mi:hover,.nav-mi:active{
+    color: #50C878;
+}
+a{
+    color: #E2BE00;
+    text-decoration: none;
+}
+/* бургер меню */
+.burger{
+    display: none;
+    position: relative;
+    z-index: 50;
+    align-items: center;
+    justify-content: flex-end;
+    width: 40px;
+    height: 20px;
+}
+.burger span{
+    height: 2px;
+    width: 100%;
+    transform: scale(1);
+    background-color: #E2BE00;
+}
+.burger::before, .burger::after{
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: #E2BE00;
+    transition: all 0.3s ease 0s;
+}
+.burger::before { top: 0 }
+.burger::after { bottom: 0 }
+.burger.active span { transform: scale(0) }
+.burger.active::before{
+    top: 50%;
+    transform: rotate(-45deg) translate(0, -50%);
+}
+.burger.active::after{
+    bottom: 50%;
+    transform: rotate(45deg) translate(0,50%);
+}
+/* Подвал */
+.footer {
+    width: 100%;
+    height: 250px;
+    background: #230802;
+}
+.line-footer {
+    width: 80%;
+    height: 2px;
+    background: #FFD600;
+    height: 2px;
+    margin-left: 10%;
+}
+.footer-content {
+    width: 80%;
+    display: flex;
+    margin: auto;
+}
+.logo-and-text {
+    display: grid;
+    margin-left: 45px;
+    margin-top: 45px;
+}
+.fotter-text-an-logo {
+    text-align: center;
+    color: white;
+}
+.logfot{
+    width: 100px;
+    height: 100px;
+    margin-left: 40px;
+    margin-bottom: 10px;
+    background-image: url(../img/logo_big.svg);
+    margin-top: 0;
+}
+.nav-footer {
+    display: grid;
+    margin-top: 20px;
+    margin-left: 35%;   
+}
+.nav-footer ul{
+    text-align: center;
+    list-style: none;
+    color: #E2BE00;
+    font-size: 20px;
+    font-family: 'Arsenal' ;
+    font-weight: normal;
+}
+.nav-footer ul>li{
+    padding: 10px;
+}
+.iconics-footer {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    margin-left: 35%;
+}
+.ic {
+    height: 45px;
+    width: 45px;
+}
+.vk {
+    background-image: url(../img/vk.png);
+}
+.tg {
+    background-image: url(../img/tg.png);
+}
+.menu-lin{
+    background: #FFD600;
+    height: 5px;
+}
+/* main str */
+/* Превью страницы */
+.previe {
+    width: 100%;
+    height: 900px;
+    background-size: cover;
+    background-image: url(../img/fon-main01.png);
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+}
+.img-prew {
+    margin-top: 100px;
+    width: 400px;
+    height: 700px;
+    background-size: cover;
+    background-image: url(../img/image\ 1.png);
+}
+.text-content-prew {
+    display: grid;
+    height: 225px;
+    margin-top: 270px;
+}
+.prew-zag {
+    font-family:'harrypotter' ;
+    font-weight: normal;
+    font-size: 100px;
+    color: #FFD600;
+}
+.prew-podtext {
+    font-family: 'IBMPlexSans';
+    font-size: 40px;
+    font-weight: normal;
+    color: #200B04;
+}
+.prew-text {
+    font-family: 'IBMPlexSans';
+    font-weight: normal;
+    font-size: 36px;
+    color: #ffffff;
+    letter-spacing: -1.8px;
+}
+/* Популярное в меню */
+.accorti {
+    width: 100%;
+    height: 670px;
+    background: rgba(35, 8, 2, 0.95);
+}
+.zag-accorti {
+    color: #ffffff;
+    font-family: 'RubikDoodle';
+    font-size: 60px;
+    font-weight: normal;
+    margin-left: 37%;
+    margin-top: 40px;
+}
+.cards-accorti {
+    width: 80%;
+    margin-left: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 45px;
+}
+.card-accorti {
+    display: grid;
+    margin-top: 60px;
+}
+.card-img-acc {
+    width: 250px;
+    height: 300px;
+    border-radius: 20px;
+}
+.lig {
+    background-image: url(../img/Rectangle\ 4.png);
+}
+.zif {
+    background-image: url(../img/Rectangle\ 5.png);
+}
+.pal {
+    background-image: url(../img/Rectangle\ 6.png);
+}
+.stac {
+    background-image: url(../img/Rectangle\ 7.png);
+}
+.card-text-acc {
+    color: #FFF;
+    text-align:center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family:'Lumos';
+    font-size: 24px;
+    font-weight: 400;
+}
+.card-cart {
+    width: 250px;
+    height: 50px;
+    border: none;
+    border-radius: 20px;
+    background: #510F00;
+    color: #E2BE00;
+    text-align: center;
+    font-family: 'Arsenal';
+    font-size: 32px;
+    font-weight: 700;
+    margin: auto;
+}
+/* Комбо и волшебное */
+.kombo-magig {
+    width: 100%;
+    height: 1320px;
+    background-size: cover;
+    background-image: url(../img/fon-main02.png);
+}
+.kom-zag {
+    color: #FFF;
+    font-family: 'Arsenal';
+    font-size: 60px;
+    font-weight: 700;
+    margin-left: 47%;
+    padding-top: 40px;
+}
+.cards-kombo {
+    width: 80%;
+    margin-left: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 100px;
+}
+.card-kombo {
+    display: grid;
+    margin-top: 50px;
+}
+.img-kombo {
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+}
+.dobby {
+    background-image: url(../img/Rectangle\ 9.png);
+}
+.expres {
+    background-image: url(../img/Rectangle\ 11.png);
+}
+.fenix {
+    background-image: url(../img/Rectangle\ 112.png);
+}
+.card-text-kombo {
+    color: #FFF;
+    text-align: center;
+    font-family: 'Lumos';
+    font-size: 32px;
+    font-weight: 400;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.magigs {
+    width: 800px;
+    height: 600px;
+    border-radius: 20px;
+    margin-top: 60px;
+    margin-left: 30%;
+    background-color: #230802;
+}
+.zag-magig {
+    padding-top: 20px;
+    color: #FFD600;
+    font-family: 'RubikDoodle';
+    font-size: 60px;
+    font-weight: 400;
+    margin-left: 30%;
+}
+.cards-magig {
+    display: flex;
+    justify-content: center;
+    gap: 65px;
+}
+.card-magig {
+    display: grid;
+    margin-top: 30px;
+}
+.hedvig {
+    background-image: url(../img/Rectangle\ 113.png);
+}
+.beer {
+    background-image: url(../img/Rectangle\ 114.png);
+}
+.text-magig {
+    color: #FFF;
+    text-align: center;
+    font-family: 'Lumos';
+    font-size: 40px;
+    font-weight: 400;
+}
+/* Вторая страница меню */
+/* навигация в разделах меню */
+.navig-menu-text {
+    width: 100%;
+    height: 450px;
+    background-size: cover;
+    background-image: url(../img/fon-menu01.png);
+}
+.navig-me-text {
+    font-family:'harrypotter' ;
+    color: #FFD600;
+    font-size: 200px;
+    font-weight: 400;
+    margin-left: 40%;
+    padding-top: 95px;
+}
+.mini-text-nav {
+    width: 80%;
+    margin-left: 10%;
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    gap: 30px;
+}
+.mini-t-n>a {
+    color: #FFF;
+    text-align: center;
+    font-family: 'Arsenal';
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+}
+.mini-t-n>a:hover {
+    color: #FFD600;
+}
+/* классика */
+.claas{
+    height: 1700px;
+}
+.cl{
+    margin-left: 41%;
+}
+.hotch{
+    background-image: url(../img/Rectangle\ 41.png);
+}
+.glitvein{
+    background-image: url(../img/Rectangle025.png);
+}
+/* Холодное */
+.coldd{
+    height: 1300px;
+}
+.cold-dr{
+    gap: 100px;
+    padding: 50px 0px;
+}
+.moxito{
+    background-image: url(../img/Rectangle\ 70.png);
+}
+/* Растительное */
+.rast-sit-cook{
+    width: 100%;
+    height: 2466px;
+    background-size: cover;
+    background-image: url(../img/fon-menu03.png);
+}
+.rasti{
+    margin-left: 35%;
+}
+.onee{
+    background-image: url(../img/Rectanglebb\ 7.png);
+}
+.twoo{
+    background-image: url(../img/Rectanglebb\ 6.png);
+}
+.three{
+    background-image: url(../img/Rectangle\ 113.png);
+}
+/* Сытное */
+.send{
+    background-image: url(../img/blin.png);
+}
+.blin{
+    background-image: url(../img/Rectangle\ 113.png);
+}
+.tyu{
+    gap: 100px;
+}
+/* Выпечка */
+.nitt{
+    background-image: url(../img/orish.png);
+}
+.cooking{
+    background-image: url(../img/Rectangle011.png);
+}
+.ovso{
+    background-image: url(../img/image\ 0101.png);
+}
+.ponchik{
+    background-image: url(../img/Rectangle\ 10020.png);
+}
+.maff{
+    background-image: url(../img/Rectangle\ 1351.png);
+}
+/* Страница Связь */
+/* Блок с формой */
+.ob-sviz {
+    width: 100%;
+    height: 900px;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    background-image: url(../img/image\ 12.png);
+}
+.zag-sviz {
+    color: #E2BE00;
+    font-family: 'Lumos';
+    font-size: 70px;
+    font-weight: 400;
+    margin-left: 20px;
+    margin-top: 120px;
+}
+.block-form {
+    margin-top: 120px;
+    width: 570px;
+    height: 678px;
+    border-radius: 50px;
+    background: rgba(35, 8, 2, 0.90);
+}
+form{
+    display: grid;
+    margin-left: 45px;
+} input{
+    width: 500px;
+    height: 70px;
+    border-radius: 13px;
+    background: rgba(245, 245, 245, 0.70);
+}
+#obra{
+    height: 140px;
+}
+#sub{
+    width: 350px;
+    height: 70px;
+    margin: auto;
+    margin-top: 35px;
+    border-radius: 20px;
+    background: #510F00;
+    color: #E2BE00;
+    text-align: center;
+    font-family: 'Arsenal';
+    font-size: 32px;
+    font-weight: 700;
+    border: none;
+}
+label{
+    color: #FFF;
+    text-align: left;
+    padding-top: 6px;
+    padding-bottom: 5px;
+    font-family: 'Arsenal';
+    font-size: 32px;
+    font-weight: 700;
+}
+/* Информация для сотрудничества и связи */
+.textion-inform-cotryd {
+    width: 100%;
+    height: 350px;
+    background-color: #230802;
+    display: flex;
+    gap: 115px;
+    justify-content: center;
+}
+.text-cotryd {
+    padding-top: 25px;
+}
+.text-zag-cotryd {
+    color: #E2BE00;
+    text-align: center;
+    font-family: 'Lumos';
+    font-size: 40px;
+    font-weight: 400;
+}
+.line-cotryd {
+    background-color: #FFD600;
+    height: 3px;
+    width: 638px;
+}
+.lin-cot {
+    display: flex;
+    gap: 25px;
+    margin-top: 40px;
+}
+.cot-ic {
+    width: 33px;
+    height: 33px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.inst {
+    background-image: url(../img/Vector1.png);
+}
+.phone {
+    background-image: url(../img/Vector.png);
+}
+.cot-text {
+    color: #FFF;
+    text-align: center;
+    font-family: 'Lumos';
+    font-size: 30px;
+    font-weight: 400;
+}
+.logo-big {
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+    background-image: url(../img/logo_big.svg);
+}
+/* text */
+.block-text{
+    width: 100%;
+    height: 605px;
+    background-size: cover;
+    background-image: url(../img/fon-com.png);
+}
+.text-info {
+    text-align: center;
+    width: 60%;
+    padding-top: 90px;
+    margin: 0 auto;
+    color: #FFD600;
+    font-family: 'Lumos';
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+}
+/* Страница галерея */
+.zag-st {
+    width: 100%;
+    height: 425px;
+    background-size: cover;
+    background-image: url(../img/fon-gal01.png);
+}
+.text-nazvanst {
+    margin-left: 40%;
+    margin-top: 95px;
+    font-family:'harrypotter' ;
+    color: #FFD600;
+    font-size: 200px;
+    font-weight: 400;
+}
+.gal-zag{
+    font-family:'harrypotter' ;
+    color: #FFF;
+    font-size: 100px;
+    font-weight: 400;
+    margin-left: 35%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.iio{
+    margin-left: 30%;
+}
+.gallery-fons{
+    width: 100%;
+    height: 2099px;
+    background-size: cover;
+    background-image: url(../img/fon-gal02.png);
+}
+.slider{
+    display: flex;
+    justify-content: center;
+}
+.slider02{
+   margin-left: 27%;
+}
+a>.previous-mobile{
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    background-image: url(../img/left.png);
+}
+a>.next-mobile{
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    background-image: url(../img/right.png);
+}

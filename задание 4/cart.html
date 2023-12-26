@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="./asset/css/style.css">
+    <link rel="stylesheet" href="./asset/css/media.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <a href="./main.html"><div class="logo"></div></a>
+            <div class="text-nav-menu">
+                <nav class="nav">
+                    <ul>
+                        <li class="nav-mi"><a href="./menu.html">Меню</a></li>
+                        <li class="nav-mi"><a href="./gallery.html">Галерея</a></li>
+                        <li class="nav-mi"><a href="./communication.html">Связь</a></li>
+                    </ul>
+                </nav>
+                <div class="burger">
+                    <span></span>
+                </div>
+            </div>
+            <a href="./cart.html"><div class="cart-ic"></div></a>           
+        </header>
+        <main>
+            <hr class="menu-lin">
+        </main>
+        <footer class="footer"><br>
+            <hr class="line-footer">
+            <div class="footer-content">
+                <div class="logo-and-text">
+                    <a href="./main.html"><div class="logo logfot"></div></a>
+                    <div class="fotter-text-an-logo">Адрес: пр-кт.Октября 59<br>Телефон: 8(912) 080-48-52</div>
+                </div>
+                <div class="nav-footer">
+                    <ul>
+                        <li><a href="./menu.html">Меню</a></li>
+                        <li><a href="./gallery.html">Галерея</a></li>
+                        <li><a href="./communication.html">Связь</a></li>
+                    </ul>
+                </div>
+                <div class="iconics-footer">
+                    <div class="ic vk"></div>
+                    <div class="ic tg"></div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script>
+        document.querySelector('.burger').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.querySelector('.nav').classList.toggle('open');
+        })
+    </script>
+</body>
+</html>
